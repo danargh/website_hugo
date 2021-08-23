@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Taruna Desain Website'
+theme = 'taruna'
+summaryLength = 10
+paginate = 2 
+[params]
+Description = 'Tempat Belajar Koding'

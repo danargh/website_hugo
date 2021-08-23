@@ -1,0 +1,9 @@
+<a href="/">Home</a>
+{{ if .IsHome }}
+  <a href="/posts">Blog</a>
+{{ end }}
+
+{{ if .IsPage }}
+<!-- page adalah konten biasa -->
+  <p>Halaman konten</p>
+{{ end }}

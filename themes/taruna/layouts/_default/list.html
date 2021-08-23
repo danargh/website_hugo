@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+  <ul>
+    {{ range .Paginator.Pages }}
+    <!-- hanya looping halaman2 pages nya saja -->
+    <li>
+      <a href="{{.Permalink}}">{{.Title}}</a>
+      <span>{{.Date.Format "2006-01-02"}}</span>
+    </li>
+    {{ end }}
+  </ul>
+
+  <!-- memberikan sistem pagination secara otomatis keren parah masya allah -->
+  {{ template "_internal/pagination.html".}}
+
+{{ end }}

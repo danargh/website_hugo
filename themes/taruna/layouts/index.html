@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<h2>Daftar Konten</h2>
+<ul>
+  {{ range where .Site.RegularPages "Section" "posts"}}
+  <!-- hanya looping halaman2 pages nya saja -->
+  <li>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+    <!-- <p>{{.Summary}}</p> -->
+    <!-- kita bisa memilih yang tampi itu summary atau desc nya. better desc nya sih -->
+    <p>{{or .Params.description .Summary}}</p>
+    <span>Dibuat {{.Date.Format "2006-01-02"}}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
